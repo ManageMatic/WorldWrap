@@ -1,0 +1,17 @@
+body{
+    background-color: #B0E0E6;
+}
+.my-2 {
+    font-family: 'adamina';
+}
+
+@media (max-width: 768px) {
+    .my-3 {
+        margin-top: 1rem;
+    }
+    
+    .col-md-4 {
+        flex: 0 0 100%;
+        max-width: 100%;
+    }
+}
