@@ -75,7 +75,7 @@ WorldWrap/
 ## 📸 Screenshots
 
 ```
-![Home Page](./screenshots/home.png)
+![Home Page](./screenshots/Home.png)
 ```
 
 ---
@@ -181,7 +181,5 @@ If you like this project:
 🌟 Star this repository
 🍴 Fork it
 📢 Share it
-
----
 
 ---
