@@ -1,70 +1,187 @@
-# Getting Started with Create React App
+# 🌍 WorldWrap
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+### 📰 *Unwrapping the Truth, One Story at a Time*
 
-## Available Scripts
+![React](https://img.shields.io/badge/React-18-blue?logo=react)
+![Bootstrap](https://img.shields.io/badge/Bootstrap-5-purple?logo=bootstrap)
+![JavaScript](https://img.shields.io/badge/JavaScript-ES6-yellow?logo=javascript)
+![License](https://img.shields.io/badge/License-MIT-green)
 
-In the project directory, you can run:
+> A modern, responsive news web application built with **React.js** that delivers real-time top headlines across multiple categories.
 
-### `npm start`
+---
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+## 📌 About The Project
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+**WorldWrap** is a dynamic news application that fetches the latest headlines using a News API and presents them in a clean, card-based UI.
 
-### `npm test`
+It focuses on:
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+* 📱 Responsive design
+* ⚡ Fast loading
+* 🎯 Clean UI/UX
+* 🧠 Category-based filtering
+* 🖼️ Article image validation
+* ✂️ Smart title & description trimming
 
-### `npm run build`
+---
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+## ✨ Features
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+✅ Top headlines display
+✅ Category-based news (Business, Sports, Technology, Health, etc.)
+✅ Responsive Bootstrap layout
+✅ Article cards with images
+✅ Auto-trimmed titles & descriptions
+✅ Filters out articles without image/description
+✅ Clean and modern navbar with slogan
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+---
 
-### `npm run eject`
+## 🛠️ Tech Stack
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+| Technology       | Purpose            |
+| ---------------- | ------------------ |
+| React.js         | Frontend Framework |
+| Bootstrap 5      | UI Styling         |
+| JavaScript (ES6) | Logic              |
+| News API         | Fetching Live News |
+| CSS              | Custom Styling     |
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+---
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+## 📂 Folder Structure
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+```
+WorldWrap/
+│
+├── public/
+│
+├── src/
+│   ├── components/
+│   │   ├── NavBar.js
+│   │   ├── News.js
+│   │   ├── NewsItems.js
+│   │   └── Spinner.js
+│   │
+│   ├── App.js
+│   ├── index.js
+│
+└── README.md
+```
 
-## Learn More
+---
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+## 📸 Screenshots
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+```
+![Home Page](./screenshots/home.png)
+```
 
-### Code Splitting
+---
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+## ⚙️ Installation & Setup
 
-### Analyzing the Bundle Size
+### 1️⃣ Clone the repository
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+```bash
+git clone https://github.com/your-username/worldwrap.git
+```
 
-### Making a Progressive Web App
+### 2️⃣ Navigate to project folder
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+```bash
+cd worldwrap
+```
 
-### Advanced Configuration
+### 3️⃣ Install dependencies
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+```bash
+npm install
+```
 
-### Deployment
+### 4️⃣ Start development server
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+```bash
+npm start
+```
 
-### `npm run build` fails to minify
+App will run at:
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+```
+http://localhost:3000
+```
+
+---
+
+## 🔑 Environment Variables
+
+Create a `.env` file in root folder and add:
+
+```
+REACT_APP_NEWS_API_KEY=your_api_key_here
+```
+
+---
+
+## 📈 Future Improvements
+
+* 🔍 Search functionality
+* 🌙 Dark Mode
+* 📌 Save/Bookmark articles
+* 🔔 Breaking News Alerts
+* 🌎 Multi-country support
+* 📊 Pagination improvements
+
+---
+
+## 🧠 Learning Outcomes
+
+Through building WorldWrap, I practiced:
+
+* React class components
+* API integration
+* State management
+* Conditional rendering
+* Error handling
+* Filtering & mapping data
+* UI/UX improvements
+
+---
+
+## 🤝 Contributing
+
+Contributions are welcome!
+
+1. Fork the project
+2. Create your feature branch
+3. Commit your changes
+4. Push to the branch
+5. Open a Pull Request
+
+---
+
+## 📜 License
+
+This project is licensed under the MIT License.
+
+---
+
+## 👨‍💻 Author
+
+**Ish (IT Student)**
+Passionate about building modern web applications 🚀
+
+---
+
+## ⭐ Support
+
+If you like this project:
+
+🌟 Star this repository
+🍴 Fork it
+📢 Share it
+
+---
+
+---
