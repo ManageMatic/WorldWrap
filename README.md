@@ -74,9 +74,11 @@ WorldWrap/
 
 ## 📸 Screenshots
 
-```
-![Home Page](screenshots/Home.png)
-```
+<p align="center">
+  <img src="./screenshots/Home.png" width="700" alt="WorldWrap Home Screen" />
+</p>
+
+_A clean preview of the main WorldWrap UI._
 
 ---
 
