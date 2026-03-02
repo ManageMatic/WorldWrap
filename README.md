@@ -75,7 +75,7 @@ WorldWrap/
 ## 📸 Screenshots
 
 ```
-![Home Page](./screenshots/Home.png)
+![Home Page](screenshots/Home.png)
 ```
 
 ---
