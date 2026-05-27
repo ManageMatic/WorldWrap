@@ -1,0 +1,43 @@
+/* About component specific styles */
+
+.about-container {
+  margin-top: 80px;
+  margin-bottom: 40px;
+  font-family: var(--font-body);
+}
+
+@media (min-width: 992px) {
+  .about-container {
+    margin-top: 115px;
+  }
+}
+
+.accordion-item-custom {
+  background: var(--card-bg) !important;
+  border: 1px solid var(--glass-border) !important;
+  margin-bottom: 12px;
+  border-radius: 12px !important;
+  overflow: hidden;
+}
+
+.accordion-button-custom {
+  background: transparent !important;
+  color: var(--text-primary) !important;
+  font-family: var(--font-heading);
+  font-weight: 700;
+  box-shadow: none !important;
+}
+
+.accordion-button-custom:not(.collapsed) {
+  border-bottom: 1px solid var(--glass-border);
+}
+
+.about-card {
+  background: var(--card-bg);
+  border: 1px solid var(--glass-border);
+  border-radius: 20px;
+  padding: 30px;
+  margin-bottom: 30px;
+  font-size: 1.1rem;
+  line-height: 1.7;
+}

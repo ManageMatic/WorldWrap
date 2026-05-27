@@ -1,0 +1,97 @@
+/* Premium Custom Global Styling & CSS Variables */
+:root {
+  /* Font Families */
+  --font-heading: 'Playfair Display', Georgia, serif;
+  --font-body: 'Plus Jakarta Sans', system-ui, -apple-system, sans-serif;
+  --font-logo: 'Adamina', serif;
+
+  /* Theme Transitions */
+  --theme-transition: all 0.4s cubic-bezier(0.25, 0.8, 0.25, 1);
+
+  /* Light Theme Variables */
+  --bg-gradient: linear-gradient(135deg, #f5f7fa 0%, #e4e8f0 100%);
+  --bg-main: #f5f7fa;
+  --text-primary: #1e293b;
+  --text-secondary: #64748b;
+  --glass-bg: rgba(255, 255, 255, 0.7);
+  --glass-border: rgba(0, 0, 0, 0.08);
+  --glass-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.06);
+  --accent-primary: #008080;
+  --accent-secondary: #00d1cd;
+  --accent-gradient: linear-gradient(135deg, #008080 0%, #00d1cd 100%);
+  --card-bg: rgba(255, 255, 255, 0.85);
+  --card-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+  --nav-bg: rgba(255, 255, 255, 0.75);
+  --input-bg: rgba(0, 0, 0, 0.04);
+}
+
+[data-theme="dark"] {
+  /* Dark Theme Variables */
+  --bg-gradient: linear-gradient(135deg, #090a0f 0%, #12131c 100%);
+  --bg-main: #090a0f;
+  --text-primary: #f8fafc;
+  --text-secondary: #94a3b8;
+  --glass-bg: rgba(18, 19, 28, 0.7);
+  --glass-border: rgba(255, 255, 255, 0.08);
+  --glass-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
+  --accent-primary: #00d1cd;
+  --accent-secondary: #00f2fe;
+  --accent-gradient: linear-gradient(135deg, #00d1cd 0%, #00f2fe 100%);
+  --card-bg: rgba(20, 21, 33, 0.65);
+  --card-shadow: 0 10px 30px rgba(0, 0, 0, 0.25);
+  --nav-bg: rgba(13, 14, 21, 0.8);
+  --input-bg: rgba(255, 255, 255, 0.06);
+}
+
+/* Base resets & styles */
+body {
+  margin: 0;
+  padding: 0;
+  background: var(--bg-gradient);
+  background-attachment: fixed;
+  color: var(--text-primary);
+  font-family: var(--font-body);
+  transition: var(--theme-transition);
+  min-height: 100vh;
+  overflow-x: hidden;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-heading);
+  font-weight: 700;
+  letter-spacing: -0.02em;
+}
+
+/* Glassmorphism base helper */
+.glass-effect {
+  background: var(--glass-bg);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid var(--glass-border);
+  box-shadow: var(--glass-shadow);
+  transition: var(--theme-transition);
+}
+
+/* Global toast notifications */
+.toast-msg {
+  position: fixed;
+  bottom: 30px;
+  left: 50%;
+  transform: translateX(-50%) translateY(100px);
+  background: var(--text-primary);
+  color: var(--bg-main);
+  padding: 12px 24px;
+  border-radius: 30px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+  z-index: 9999;
+  font-weight: 600;
+  font-size: 0.9rem;
+  opacity: 0;
+  transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+  pointer-events: none;
+}
+
+.toast-msg.show {
+  transform: translateX(-50%) translateY(0);
+  opacity: 1;
+}

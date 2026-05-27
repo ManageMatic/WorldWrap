@@ -1,0 +1,191 @@
+/* NavBar specific styles */
+
+.navbar-custom {
+  background: var(--nav-bg) !important;
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border-bottom: 1px solid var(--glass-border);
+  box-shadow: var(--glass-shadow);
+  padding: 8px 0;
+  transition: var(--theme-transition);
+}
+
+.brand-title {
+  font-family: var(--font-heading);
+  font-weight: 800;
+  font-size: 1.45rem;
+  letter-spacing: -0.03em;
+  color: var(--text-primary) !important;
+  line-height: 1.2;
+}
+
+.brand-slogan {
+  font-family: var(--font-logo);
+  font-size: 0.52rem;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--text-secondary);
+  line-height: 1;
+  margin-top: 2px;
+}
+
+.nav-link-custom {
+  font-family: var(--font-body);
+  font-weight: 600;
+  font-size: 0.88rem !important;
+  color: var(--text-secondary) !important;
+  padding: 6px 10px !important;
+  margin: 0 2px;
+  border-radius: 8px;
+  position: relative;
+  transition: var(--theme-transition);
+  white-space: nowrap !important;
+  display: inline-flex;
+  align-items: center;
+}
+
+.nav-link-custom:hover {
+  color: var(--text-primary) !important;
+  background: var(--input-bg);
+}
+
+.nav-link-custom.active {
+  color: var(--accent-primary) !important;
+  background: var(--input-bg);
+}
+
+.nav-link-custom.active::after {
+  content: '';
+  position: absolute;
+  bottom: 0px;
+  left: 10px;
+  right: 10px;
+  height: 3px;
+  background: var(--accent-gradient);
+  border-radius: 10px;
+  box-shadow: 0 1px 6px rgba(0, 209, 205, 0.4);
+}
+
+.nav-link-bookmarks {
+  color: var(--accent-primary) !important;
+}
+
+.nav-link-bookmarks:hover {
+  background: rgba(0, 209, 205, 0.1) !important;
+  color: var(--accent-secondary) !important;
+}
+
+/* Search bar styling */
+.search-container {
+  position: relative;
+  max-width: 170px;
+  width: 100%;
+  transition: max-width 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+}
+
+.search-input {
+  width: 100%;
+  padding: 8px 16px 8px 36px;
+  font-size: 0.88rem;
+  border-radius: 20px;
+  border: 1px solid var(--glass-border);
+  background: var(--input-bg);
+  color: var(--text-primary);
+  outline: none;
+  transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+}
+
+.search-input:focus {
+  border-color: var(--accent-primary);
+  background: var(--card-bg);
+  box-shadow: 0 0 12px rgba(0, 209, 205, 0.25);
+}
+
+.search-icon {
+  position: absolute;
+  left: 12px;
+  top: 50%;
+  transform: translateY(-50%);
+  color: var(--text-secondary);
+  pointer-events: none;
+  font-size: 0.85rem;
+}
+
+/* Interactive elements */
+.theme-toggle-btn {
+  background: var(--input-bg);
+  border: 1px solid var(--glass-border);
+  color: var(--text-primary);
+  width: 38px;
+  height: 38px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: var(--theme-transition);
+}
+
+.theme-toggle-btn:hover {
+  transform: scale(1.1) rotate(15deg);
+  background: var(--accent-gradient);
+  color: white;
+  border-color: transparent;
+}
+
+.country-selector {
+  background: var(--input-bg);
+  color: var(--text-primary);
+  border: 1px solid var(--glass-border);
+  padding: 6px 12px;
+  border-radius: 18px;
+  font-size: 0.85rem;
+  outline: none;
+  cursor: pointer;
+  transition: var(--theme-transition);
+}
+
+.country-selector option {
+  background: var(--bg-main);
+  color: var(--text-primary);
+}
+
+.country-selector:focus {
+  border-color: var(--accent-primary);
+}
+
+/* Responsive spacing optimizations for standard screens */
+@media (min-width: 992px) {
+  .navbar-collapse {
+    display: flex !important;
+    align-items: center !important;
+    justify-content: space-between !important;
+    flex-wrap: nowrap !important;
+  }
+
+  .navbar-nav {
+    flex-direction: row !important;
+    align-items: center !important;
+    flex-wrap: nowrap !important;
+  }
+
+  .navbar-collapse .d-flex.align-items-center {
+    flex-wrap: nowrap !important;
+    margin-top: 0 !important;
+  }
+
+  .search-container:focus-within {
+    max-width: 230px !important;
+  }
+}
+
+@media (min-width: 1200px) {
+  .brand-title {
+    font-size: 1.6rem;
+  }
+  .nav-link-custom {
+    font-size: 0.94rem !important;
+    padding: 8px 14px !important;
+    margin: 0 4px;
+  }
+}
