@@ -53,7 +53,10 @@ const News = ({
       } else {
         // newsapi
         const key = newsApiKey || '9d6a90ffed354199b2336ac851290d8b';
-        url = `https://newsapi.org/v2/top-headlines?country=${country}&category=${category}&apiKey=${key}&page=1&pagesize=${pageSize}`;
+        const isLocal = window.location.hostname === 'localhost' || window.location.hostname === '127.0.0.1';
+        url = isLocal 
+          ? `https://newsapi.org/v2/top-headlines?country=${country}&category=${category}&apiKey=${key}&page=1&pagesize=${pageSize}`
+          : `/api/news?country=${country}&category=${category}&apiKey=${key}&page=1&pagesize=${pageSize}`;
       }
 
       try {
@@ -163,7 +166,10 @@ const News = ({
       url = `https://api.currentsapi.services/v1/search?category=${category}&country=${country}&language=en&apiKey=${currentsApiKey}&page_number=${nextPage}&page_size=${pageSize}`;
     } else {
       const key = newsApiKey || '9d6a90ffed354199b2336ac851290d8b';
-      url = `https://newsapi.org/v2/top-headlines?country=${country}&category=${category}&apiKey=${key}&page=${nextPage}&pagesize=${pageSize}`;
+      const isLocal = window.location.hostname === 'localhost' || window.location.hostname === '127.0.0.1';
+      url = isLocal 
+        ? `https://newsapi.org/v2/top-headlines?country=${country}&category=${category}&apiKey=${key}&page=${nextPage}&pagesize=${pageSize}`
+        : `/api/news?country=${country}&category=${category}&apiKey=${key}&page=${nextPage}&pagesize=${pageSize}`;
     }
     
     try {
